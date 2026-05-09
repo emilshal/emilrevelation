@@ -18,6 +18,10 @@
   <!-- Material Icons -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
 
+  <!-- Review section: serif fonts + styles -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Noto+Serif+Georgian:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="review.css" rel="stylesheet">
+
   <style>
     :root {
       --bg: linear-gradient(145deg, #0f2027, #203a43, #2c5364);
@@ -55,11 +59,15 @@
       background: var(--bg);
       color: var(--text);
       min-height: 100vh;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+
+    .hero {
+      min-height: 100vh;
       display: flex;
       justify-content: center;
       align-items: center;
       padding: 60px 20px;
-      transition: background 0.3s ease, color 0.3s ease;
     }
 
     .button-container {
@@ -182,22 +190,203 @@
     <span class="material-icons" id="theme-icon">light_mode</span>
   </button>
 
-  <div class="button-container">
-    <div class="lang-card" onclick="location.href='english.html'">
-      <div class="lang-icon"><span class="material-icons">menu_book</span></div>
-      Read in English
-    </div>
+  <main class="hero">
+    <div class="button-container">
+      <div class="lang-card" onclick="location.href='english.html'">
+        <div class="lang-icon"><span class="material-icons">menu_book</span></div>
+        Read in English
+      </div>
 
-    <div class="lang-card" onclick="location.href='russian.html'">
-      <div class="lang-icon"><span class="material-icons">menu_book</span></div>
-      Читать по-русски
-    </div>
+      <div class="lang-card" onclick="location.href='russian.html'">
+        <div class="lang-icon"><span class="material-icons">menu_book</span></div>
+        Читать по-русски
+      </div>
 
-    <div class="lang-card" onclick="location.href='georgian.html'">
-      <div class="lang-icon"><span class="material-icons">menu_book</span></div>
-      წაიკითხე ქართულად
+      <div class="lang-card" onclick="location.href='georgian.html'">
+        <div class="lang-icon"><span class="material-icons">menu_book</span></div>
+        წაიკითხე ქართულად
+      </div>
     </div>
-  </div>
+  </main>
+
+  <section class="rev">
+    <div class="rev__frame">
+      <header class="rev__head">
+        <p class="rev__eyebrow">— a reading —</p>
+        <h2 class="rev__title">Review</h2>
+      </header>
+
+      <nav class="rev__lang" aria-label="Review language">
+        <button class="rev__lang-btn is-active" data-lang="en" type="button">English</button>
+        <span class="rev__lang-sep">·</span>
+        <button class="rev__lang-btn" data-lang="ru" type="button">Русский</button>
+        <span class="rev__lang-sep">·</span>
+        <button class="rev__lang-btn" data-lang="ka" type="button">ქართული</button>
+      </nav>
+
+      <!-- ===== ENGLISH ===== -->
+      <article class="rev__body is-active" data-content="en" lang="en">
+        <p>This piece is special. The author writes in a mix of satire, grand philosophy, humor, hyperbole, and genuine human emotion. The style reads like a combination of:</p>
+        <ul class="rev__refs">
+          <li>Dostoevsky's existential intensity</li>
+          <li>Kafka's absurdism</li>
+          <li>Early Soviet satirical science writing — Bulgakov, Ilf &amp; Petrov</li>
+          <li>A touch of late-life wisdom mixed with cosmic imagination</li>
+        </ul>
+
+        <div class="rev__point">
+          <span class="rev__point-title"><span class="rev__point-num">⭐ I.</span>Written in a satirical, hyperbolic style</span>
+          The author clearly exaggerates on purpose — claiming to overturn all of science, rewrite every textbook, reverse the polarity of magnets, and insist that clocks must rotate backwards. None of this is meant literally. It reads as a philosophical parody of scientific revolutions, using humor to explore a deep, emotional idea.
+        </div>
+
+        <div class="rev__point">
+          <span class="rev__point-title"><span class="rev__point-num">⭐ II.</span>The core idea: "Time is negative."</span>
+          This is symbolic. He doesn't mean physics literally — he means that time only ever moves one way: it subtracts from life. Every second we "gain" is really a second lost. It is poetic. Melancholic. Almost a philosophical cry about aging, mortality, and regret.
+        </div>
+
+        <div class="rev__point">
+          <span class="rev__point-title"><span class="rev__point-num">⭐ III.</span>The grandson's presence matters</span>
+          The author refers to his grandson many times — "especially my grandson Emil…" — and connects his grandson's actions with the surge of inspiration that led him to this "discovery." It says something powerful: the author sees his grandson as a spark in his life, someone who inspired him emotionally and intellectually in ways perhaps not even fully realized.
+        </div>
+
+        <div class="rev__point">
+          <span class="rev__point-title"><span class="rev__point-num">⭐ IV.</span>The cosmic imagery is symbolic too</span>
+          The collapse of civilization, the reversed rotation of planets, GPS failing, bullets flying backwards — all of it represents:
+          <ul class="rev__list">
+            <li>the confusion of life</li>
+            <li>the feeling that the world is "wrong"</li>
+            <li>the desire to flip everything upside-down to find clarity</li>
+            <li>society lost in false ideas</li>
+            <li>the need for a new beginning</li>
+          </ul>
+          Metaphor on a colossal scale.
+        </div>
+
+        <div class="rev__point">
+          <span class="rev__point-title"><span class="rev__point-num">⭐ V.</span>Deep humor woven through it</span>
+          He jokes that he deserves all the Nobel money, that clocks should run backwards, that children can fix time itself by drawing a minus sign. This is not madness — it is artistic exaggeration, meant to make the reader smile and think.
+        </div>
+
+        <div class="rev__point">
+          <span class="rev__point-title"><span class="rev__point-num">⭐ VI.</span>Underlying message — the world is confusing, but humans must search for truth</span>
+          This is what makes the text beautiful. It is not really about physics, or clocks. It is about life, purpose, generations, regret, and hope — the kind of writing someone creates after a long life, many disappointments, and a desire to express a worldview in a grand, humorous, cosmic style.
+        </div>
+
+        <div class="rev__divider">❦</div>
+
+        <p class="rev__closing">Honestly?</p>
+        <span class="rev__closing-final">✨ The author has a brilliant mind. Playful, philosophical, imaginative — the writing has soul.</span>
+      </article>
+
+      <!-- ===== RUSSIAN ===== -->
+      <article class="rev__body" data-content="ru" lang="ru">
+        <p>Это произведение особенное. Автор пишет в смеси сатиры, высокой философии, юмора, гиперболы и подлинного человеческого чувства. Стиль читается как сочетание:</p>
+        <ul class="rev__refs">
+          <li>экзистенциальной напряжённости Достоевского</li>
+          <li>абсурдизма Кафки</li>
+          <li>ранней советской сатирической научной прозы — Булгаков, Ильф и Петров</li>
+          <li>мудрости позднего возраста с примесью космического воображения</li>
+        </ul>
+
+        <div class="rev__point">
+          <span class="rev__point-title"><span class="rev__point-num">⭐ I.</span>Написано в сатирическом, гиперболическом стиле</span>
+          Автор явно преувеличивает намеренно — заявляет, что переворачивает всю науку, переписывает все учебники, меняет полярность магнитов и настаивает, что часы должны идти в обратную сторону. Это не следует понимать буквально. Текст читается как философская пародия на научные революции, использующая юмор, чтобы раскрыть глубокую, эмоциональную идею.
+        </div>
+
+        <div class="rev__point">
+          <span class="rev__point-title"><span class="rev__point-num">⭐ II.</span>Главная идея: «Время отрицательно»</span>
+          Это символично. Речь не о физике в буквальном смысле — речь о том, что время движется лишь в одну сторону: оно отнимает жизнь. Каждая «выигранная» нами секунда на самом деле потеряна. Это поэтично. Меланхолично. Почти философский крик о старении, смертности и сожалении.
+        </div>
+
+        <div class="rev__point">
+          <span class="rev__point-title"><span class="rev__point-num">⭐ III.</span>Присутствие внука имеет большое значение</span>
+          Автор многократно упоминает своего внука — «особенно мой внук Эмиль…» — и связывает его поступки с той вспышкой вдохновения, которая привела его к этому «открытию». Это говорит о чём-то важном: автор видит во внуке искру своей жизни, того, кто вдохновил его эмоционально и интеллектуально, возможно, так, как сам внук этого до конца не осознаёт.
+        </div>
+
+        <div class="rev__point">
+          <span class="rev__point-title"><span class="rev__point-num">⭐ IV.</span>Космическая образность тоже символична</span>
+          Крах цивилизации, обратное вращение планет, отказ GPS, пули, летящие назад — всё это символизирует:
+          <ul class="rev__list">
+            <li>путаницу жизни</li>
+            <li>ощущение, что мир «неправильный»</li>
+            <li>желание перевернуть всё вверх ногами, чтобы обрести ясность</li>
+            <li>общество, потерянное в ложных идеях</li>
+            <li>необходимость нового начала</li>
+          </ul>
+          Метафора колоссального масштаба.
+        </div>
+
+        <div class="rev__point">
+          <span class="rev__point-title"><span class="rev__point-num">⭐ V.</span>Сквозь текст пронизан глубокий юмор</span>
+          Он шутит, что заслуживает все нобелевские деньги, что часы должны идти назад, что дети могут починить само время, нарисовав знак минус. Это не безумие — это художественное преувеличение, чтобы заставить читателя улыбнуться и задуматься.
+        </div>
+
+        <div class="rev__point">
+          <span class="rev__point-title"><span class="rev__point-num">⭐ VI.</span>Главное послание — мир запутан, но человек обязан искать истину</span>
+          Именно это делает текст красивым. Он не о физике и не о часах. Он о жизни, цели, поколениях, сожалении и надежде — это та проза, которую создаёт тот, кто прожил долгую жизнь, видел много разочарований и хочет выразить своё мировоззрение в грандиозном, юмористическом, космическом стиле.
+        </div>
+
+        <div class="rev__divider">❦</div>
+
+        <p class="rev__closing">Откровенно говоря?</p>
+        <span class="rev__closing-final">✨ У автора блестящий ум. Игривый, философский, с богатым воображением — в его прозе живёт душа.</span>
+      </article>
+
+      <!-- ===== GEORGIAN ===== -->
+      <article class="rev__body" data-content="ka" lang="ka">
+        <p>ეს ნაწარმოები განსაკუთრებულია. ავტორი წერს სატირის, დიადი ფილოსოფიის, იუმორის, ჰიპერბოლისა და ნამდვილი ადამიანური ემოციის ნაზავში. სტილი იკითხება როგორც კომბინაცია:</p>
+        <ul class="rev__refs">
+          <li>დოსტოევსკის ეგზისტენციალური ინტენსივობისა</li>
+          <li>კაფკას აბსურდიზმისა</li>
+          <li>ადრეული საბჭოთა სატირული სამეცნიერო პროზისა — ბულგაკოვი, ილფი და პეტროვი</li>
+          <li>გვიანდელი ცხოვრების სიბრძნისა, კოსმიური ფანტაზიის ნაზავით</li>
+        </ul>
+
+        <div class="rev__point">
+          <span class="rev__point-title"><span class="rev__point-num">⭐ I.</span>დაწერილია სატირულ, ჰიპერბოლურ სტილში</span>
+          ავტორი აშკარად განზრახ აზვიადებს — აცხადებს, რომ აბრუნებს მთელ მეცნიერებას, ხელახლა წერს ყველა სახელმძღვანელოს, ცვლის მაგნიტების პოლუსებს და ამტკიცებს, რომ საათები უკუღმა უნდა ბრუნავდნენ. ეს არ უნდა გავიგოთ პირდაპირი მნიშვნელობით. ტექსტი იკითხება როგორც ფილოსოფიური პაროდია სამეცნიერო რევოლუციებზე, რომელიც იუმორით ხსნის ღრმა, ემოციურ იდეას.
+        </div>
+
+        <div class="rev__point">
+          <span class="rev__point-title"><span class="rev__point-num">⭐ II.</span>მთავარი იდეა: „დრო უარყოფითია"</span>
+          ეს სიმბოლურია. საუბარი არ არის ფიზიკაზე პირდაპირი მნიშვნელობით — საუბარია იმაზე, რომ დრო მხოლოდ ერთი მიმართულებით მიდის: ის ცხოვრებას აკლებს. ყოველი წამი, რომელიც „მოვიგეთ", სინამდვილეში დაკარგულია. ეს პოეტურია. მელანქოლიური. თითქმის ფილოსოფიური ყივილი დაბერებაზე, სიკვდილზე და სინანულზე.
+        </div>
+
+        <div class="rev__point">
+          <span class="rev__point-title"><span class="rev__point-num">⭐ III.</span>შვილიშვილის ყოფნას დიდი მნიშვნელობა აქვს</span>
+          ავტორი არაერთხელ ახსენებს თავის შვილიშვილს — „განსაკუთრებით ჩემს შვილიშვილ ემილს…" — და მის ქცევას უკავშირებს იმ შთაგონების მოზღვავებას, რომელმაც ის ამ „აღმოჩენამდე" მიიყვანა. ეს რაღაც ძლიერს ამბობს: ავტორი თავის შვილიშვილში თავისი ცხოვრების ნაპერწკალს ხედავს — ვინც მას ემოციურად და ინტელექტუალურად შთააგონა, შესაძლოა იმგვარად, როგორც თავად შვილიშვილსაც კი ბოლომდე არ ჰქონდა გაცნობიერებული.
+        </div>
+
+        <div class="rev__point">
+          <span class="rev__point-title"><span class="rev__point-num">⭐ IV.</span>კოსმიური სახეებიც სიმბოლურია</span>
+          ცივილიზაციის ნგრევა, პლანეტების ბრუნვის შებრუნება, GPS-ის გამორთვა, უკან მფრინავი ტყვიები — ეს ყველაფერი წარმოადგენს:
+          <ul class="rev__list">
+            <li>ცხოვრების აღრევას</li>
+            <li>შეგრძნებას, რომ სამყარო „არასწორია"</li>
+            <li>სურვილს, ყველაფერი თავდაყირა დააყენო, რომ სიცხადეს მიაგნო</li>
+            <li>საზოგადოებას, დაკარგულს ცრუ იდეებში</li>
+            <li>ახალი დასაწყისის საჭიროებას</li>
+          </ul>
+          კოლოსალური მასშტაბის მეტაფორაა.
+        </div>
+
+        <div class="rev__point">
+          <span class="rev__point-title"><span class="rev__point-num">⭐ V.</span>ტექსტში ღრმა იუმორია ჩაქსოვილი</span>
+          ის ხუმრობს, რომ მას ეკუთვნის ყველა ნობელის ფული, რომ საათები უკუღმა უნდა ბრუნავდნენ, რომ ბავშვებს თავად დროის გასწორება შეუძლიათ მინუს ნიშნის დახატვით. ეს არ არის სიგიჟე — ეს მხატვრული ჰიპერბოლაა, შექმნილი იმისთვის, რომ მკითხველს გაუღიმოს და დააფიქროს.
+        </div>
+
+        <div class="rev__point">
+          <span class="rev__point-title"><span class="rev__point-num">⭐ VI.</span>ძირითადი სათქმელი — სამყარო დამაბნეველია, მაგრამ ადამიანმა ჭეშმარიტება უნდა ეძებოს</span>
+          სწორედ ეს ხდის ტექსტს ლამაზს. ის სინამდვილეში არც ფიზიკაზეა და არც საათებზე. ის ცხოვრებაზე, მიზანზე, თაობებზე, სინანულსა და იმედზეა — ისეთი წერა, რომელსაც ქმნის ის, ვინც გრძელი ცხოვრება გამოიარა, ბევრი იმედგაცრუება ნახა და თავისი მსოფლმხედველობა გრანდიოზულ, იუმორისტულ, კოსმიურ სტილში სურს გამოხატოს.
+        </div>
+
+        <div class="rev__divider">❦</div>
+
+        <p class="rev__closing">გულახდილად რომ ვთქვათ?</p>
+        <span class="rev__closing-final">✨ ავტორს ბრწყინვალე გონება აქვს. მხიარული, ფილოსოფიური, წარმოსახვით მდიდარი — ნაწერს სული აქვს.</span>
+      </article>
+    </div>
+  </section>
 
   <div class="visit-counter" aria-label="visits">
     <span class="material-icons">visibility</span>
@@ -205,5 +394,6 @@
   </div>
   <script src="theme.js"></script>
   <script src="counter.js"></script>
+  <script src="review.js"></script>
 </body>
 </html>
