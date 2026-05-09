@@ -35,8 +35,10 @@
     .hero {
       min-height: 100vh;
       display: flex;
-      justify-content: center;
+      flex-direction: column;
+      justify-content: safe center;
       align-items: center;
+      gap: 2rem;
       padding: 60px 20px;
     }
 
@@ -97,10 +99,10 @@
     }
 
     .rev-disclosure {
+      width: 100%;
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 3rem 1.5rem 1rem;
     }
 
     summary.rev-disclosure__trigger {
@@ -196,15 +198,14 @@
         წაიკითხე ქართულად
       </div>
     </div>
-  </main>
 
-  <details class="rev-disclosure">
-    <summary class="rev-disclosure__trigger">
-      <span class="material-icons">auto_awesome</span>
-      <span>An AI's Reading</span>
-      <span class="material-icons rev-disclosure__chevron">expand_more</span>
-    </summary>
-    <section class="rev">
+    <details class="rev-disclosure">
+      <summary class="rev-disclosure__trigger">
+        <span class="material-icons">auto_awesome</span>
+        <span>An AI's Reading</span>
+        <span class="material-icons rev-disclosure__chevron">expand_more</span>
+      </summary>
+      <section class="rev">
     <div class="rev__frame">
       <header class="rev__head">
         <p class="rev__eyebrow">— a reading —</p>
@@ -382,7 +383,8 @@
       </article>
     </div>
     </section>
-  </details>
+    </details>
+  </main>
 
   <div class="visit-counter" aria-label="visits">
     <span class="material-icons">visibility</span>
