@@ -5,16 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Revelation</title>
 
-  <!-- Apply saved theme before paint to avoid flash -->
-  <script>
-    (function () {
-      try {
-        var t = localStorage.getItem('er_theme') || 'dark';
-        document.documentElement.setAttribute('data-theme', t);
-      } catch (e) {}
-    })();
-  </script>
-
   <!-- Material Icons -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
 
@@ -24,42 +14,22 @@
 
   <style>
     :root {
-      --bg: linear-gradient(145deg, #0f2027, #203a43, #2c5364);
-      --text: #ffffff;
-      --container-bg: rgba(255, 255, 255, 0.06);
-      --container-border: rgba(255, 255, 255, 0.15);
-      --accent: #00e0ff;
-      --pill-bg: rgba(0, 0, 0, 0.25);
-      --pill-text: rgba(255, 255, 255, 0.7);
-      --pill-border: rgba(255, 255, 255, 0.12);
-      --shadow-card: 0 8px 20px rgba(0, 255, 255, 0.1);
-      --shadow-card-hover: 0 12px 24px rgba(0, 255, 255, 0.15);
+      --paper: #f4ecdc;
+      --paper-2: #ebe1cd;
+      --ink: #2a2117;
+      --ink-soft: #5b4d38;
+      --accent: #8b5e34;
+      --rule: #c8b890;
     }
 
-    [data-theme="light"] {
-      --bg: linear-gradient(145deg, #f8f9fa, #e9ecef, #dee2e6);
-      --text: #1a1a1a;
-      --container-bg: rgba(255, 255, 255, 0.7);
-      --container-border: rgba(0, 0, 0, 0.1);
-      --accent: #0077a8;
-      --pill-bg: rgba(255, 255, 255, 0.7);
-      --pill-text: rgba(0, 0, 0, 0.7);
-      --pill-border: rgba(0, 0, 0, 0.1);
-      --shadow-card: 0 8px 20px rgba(0, 119, 168, 0.1);
-      --shadow-card-hover: 0 12px 24px rgba(0, 119, 168, 0.18);
-    }
-
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
     body {
       margin: 0;
-      font-family: 'Times New Roman', Times, serif;
-      background: var(--bg);
-      color: var(--text);
+      font-family: 'EB Garamond', 'Noto Serif Georgian', Georgia, serif;
+      background: var(--paper);
+      color: var(--ink);
       min-height: 100vh;
-      transition: background 0.3s ease, color 0.3s ease;
     }
 
     .hero {
@@ -80,43 +50,42 @@
     }
 
     .lang-card {
-      background: var(--container-bg);
-      border: 1px solid var(--container-border);
-      border-radius: 24px;
-      padding: 60px 40px;
+      background: var(--paper-2);
+      border: 1px solid var(--rule);
+      border-radius: 10px;
+      padding: 50px 40px;
       width: 280px;
       text-align: center;
-      color: var(--text);
-      font-weight: 600;
-      font-size: 18px;
+      color: var(--ink);
+      font-family: 'Cormorant Garamond', 'Noto Serif Georgian', serif;
+      font-weight: 500;
+      font-size: 1.4rem;
+      letter-spacing: 0.02em;
       cursor: pointer;
-      box-shadow: var(--shadow-card);
+      box-shadow: 0 6px 20px rgba(42, 33, 23, 0.08);
       position: relative;
-      transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
       overflow: hidden;
       z-index: 1;
     }
 
     .lang-card:hover {
       transform: scale(1.03);
-      box-shadow: var(--shadow-card-hover);
+      box-shadow: 0 12px 28px rgba(42, 33, 23, 0.15);
     }
 
     .lang-icon {
-      font-size: 48px;
       margin-bottom: 20px;
-      color: var(--accent);
-      transition: transform 0.2s ease, color 0.3s ease;
-      z-index: 2;
     }
 
-    .lang-card:hover .lang-icon {
-      transform: scale(1.1);
-    }
-
-    .material-icons {
+    .lang-icon .material-icons {
       font-size: 48px;
       color: var(--accent);
+      transition: transform 0.2s ease;
+    }
+
+    .lang-card:hover .lang-icon .material-icons {
+      transform: scale(1.1);
     }
 
     @media (max-width: 900px) {
@@ -127,6 +96,63 @@
       }
     }
 
+    .rev-disclosure {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 3rem 1.5rem 1rem;
+    }
+
+    summary.rev-disclosure__trigger {
+      list-style: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      cursor: pointer;
+      font-family: 'Cormorant Garamond', 'Noto Serif Georgian', serif;
+      font-style: italic;
+      font-size: 1.2rem;
+      letter-spacing: 0.05em;
+      color: var(--ink-soft);
+      padding: 0.7rem 1.6rem;
+      border: 1px solid var(--rule);
+      border-radius: 999px;
+      background: var(--paper-2);
+      transition: color 0.25s ease, border-color 0.25s ease, background 0.25s ease, transform 0.15s ease;
+      user-select: none;
+    }
+
+    summary.rev-disclosure__trigger::-webkit-details-marker { display: none; }
+    summary.rev-disclosure__trigger::marker { content: ''; }
+
+    summary.rev-disclosure__trigger:hover {
+      color: var(--accent);
+      border-color: var(--accent);
+      transform: translateY(-1px);
+    }
+
+    summary.rev-disclosure__trigger .material-icons {
+      font-size: 1.2rem;
+      color: var(--accent);
+    }
+
+    .rev-disclosure__chevron {
+      transition: transform 0.3s ease;
+    }
+
+    .rev-disclosure[open] .rev-disclosure__chevron {
+      transform: rotate(180deg);
+    }
+
+    .rev-disclosure[open] > .rev {
+      animation: revOpen 0.5s ease;
+    }
+
+    @keyframes revOpen {
+      from { opacity: 0; transform: translateY(8px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
     .visit-counter {
       position: fixed;
       bottom: 14px;
@@ -134,62 +160,25 @@
       display: flex;
       align-items: center;
       gap: 6px;
-      padding: 6px 10px;
-      font-family: 'Times New Roman', Times, serif;
-      font-size: 12px;
-      color: var(--pill-text);
-      background: var(--pill-bg);
-      border: 1px solid var(--pill-border);
+      padding: 6px 12px;
+      font-family: 'EB Garamond', 'Noto Serif Georgian', Georgia, serif;
+      font-size: 13px;
+      color: var(--ink-soft);
+      background: var(--paper-2);
+      border: 1px solid var(--rule);
       border-radius: 999px;
-      backdrop-filter: blur(8px);
-      -webkit-backdrop-filter: blur(8px);
       z-index: 1000;
       user-select: none;
       pointer-events: none;
-      transition: background 0.3s ease, border-color 0.3s ease, color 0.3s ease;
     }
 
     .visit-counter .material-icons {
       font-size: 14px;
       color: var(--accent);
     }
-
-    .theme-toggle {
-      position: fixed;
-      top: 14px;
-      right: 14px;
-      width: 40px;
-      height: 40px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 0;
-      background: var(--pill-bg);
-      border: 1px solid var(--pill-border);
-      border-radius: 999px;
-      color: var(--accent);
-      cursor: pointer;
-      backdrop-filter: blur(8px);
-      -webkit-backdrop-filter: blur(8px);
-      z-index: 1000;
-      transition: background 0.3s ease, border-color 0.3s ease, color 0.3s ease, transform 0.15s ease;
-    }
-
-    .theme-toggle:hover {
-      transform: scale(1.08);
-    }
-
-    .theme-toggle .material-icons {
-      font-size: 20px;
-      color: var(--accent);
-    }
   </style>
 </head>
 <body>
-  <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
-    <span class="material-icons" id="theme-icon">light_mode</span>
-  </button>
-
   <main class="hero">
     <div class="button-container">
       <div class="lang-card" onclick="location.href='english.html'">
@@ -209,7 +198,13 @@
     </div>
   </main>
 
-  <section class="rev">
+  <details class="rev-disclosure">
+    <summary class="rev-disclosure__trigger">
+      <span class="material-icons">auto_awesome</span>
+      <span>An AI's Reading</span>
+      <span class="material-icons rev-disclosure__chevron">expand_more</span>
+    </summary>
+    <section class="rev">
     <div class="rev__frame">
       <header class="rev__head">
         <p class="rev__eyebrow">— a reading —</p>
@@ -386,13 +381,13 @@
         <span class="rev__closing-final">✨ ავტორს ბრწყინვალე გონება აქვს. მხიარული, ფილოსოფიური, წარმოსახვით მდიდარი — ნაწერს სული აქვს.</span>
       </article>
     </div>
-  </section>
+    </section>
+  </details>
 
   <div class="visit-counter" aria-label="visits">
     <span class="material-icons">visibility</span>
     <span id="visit-count">…</span>
   </div>
-  <script src="theme.js"></script>
   <script src="counter.js"></script>
   <script src="review.js"></script>
 </body>

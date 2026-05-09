@@ -5,59 +5,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>To Everyone!</title>
 
-  <!-- Apply saved theme before paint to avoid flash -->
-  <script>
-    (function () {
-      try {
-        var t = localStorage.getItem('er_theme') || 'dark';
-        document.documentElement.setAttribute('data-theme', t);
-      } catch (e) {}
-    })();
-  </script>
-
   <!-- Material Icons -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
 
+  <!-- Serif fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Noto+Serif+Georgian:wght@400;500;600&display=swap" rel="stylesheet">
+
   <style>
     :root {
-      --bg: linear-gradient(145deg, #0f2027, #203a43, #2c5364);
-      --text: #ffffff;
-      --container-bg: rgba(255, 255, 255, 0.06);
-      --container-border: rgba(255, 255, 255, 0.15);
-      --accent: #00e0ff;
-      --pill-bg: rgba(0, 0, 0, 0.25);
-      --pill-text: rgba(255, 255, 255, 0.7);
-      --pill-border: rgba(255, 255, 255, 0.12);
-      --shadow-container: 0 8px 24px rgba(0, 0, 0, 0.2);
+      --paper: #f4ecdc;
+      --paper-2: #ebe1cd;
+      --ink: #2a2117;
+      --ink-soft: #5b4d38;
+      --accent: #8b5e34;
+      --rule: #c8b890;
     }
 
-    [data-theme="light"] {
-      --bg: linear-gradient(145deg, #f8f9fa, #e9ecef, #dee2e6);
-      --text: #1a1a1a;
-      --container-bg: rgba(255, 255, 255, 0.7);
-      --container-border: rgba(0, 0, 0, 0.1);
-      --accent: #0077a8;
-      --pill-bg: rgba(255, 255, 255, 0.7);
-      --pill-text: rgba(0, 0, 0, 0.7);
-      --pill-border: rgba(0, 0, 0, 0.1);
-      --shadow-container: 0 8px 24px rgba(0, 0, 0, 0.08);
-    }
-
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
     body {
       margin: 0;
-      font-family: 'Times New Roman', Times, serif;
-      background: var(--bg);
-      color: var(--text);
+      font-family: 'EB Garamond', 'Noto Serif Georgian', Georgia, serif;
+      background: var(--paper);
+      color: var(--ink);
       min-height: 100vh;
       display: flex;
       flex-direction: column;
       align-items: center;
       padding: 40px 20px;
-      transition: background 0.3s ease, color 0.3s ease;
     }
 
     .back-button {
@@ -65,44 +40,57 @@
       margin-bottom: 20px;
       color: var(--accent);
       text-decoration: none;
-      font-size: 18px;
+      font-family: 'Cormorant Garamond', 'Noto Serif Georgian', serif;
+      font-style: italic;
+      font-size: 19px;
       display: flex;
       align-items: center;
       gap: 5px;
-      transition: color 0.3s ease;
+      transition: color 0.25s ease;
     }
 
-    .back-button span {
-      text-decoration: none;
-    }
+    .back-button span { text-decoration: none; }
 
-    /* Only underline the text span on hover */
+    .back-button:hover { color: var(--ink); }
+
     .back-button:hover span:last-child {
       text-decoration: underline;
     }
 
+    .back-button .material-icons {
+      font-size: 22px;
+      color: inherit;
+    }
+
     .container {
-      background: var(--container-bg);
-      border: 1px solid var(--container-border);
-      border-radius: 20px;
+      background: var(--paper-2);
+      border: 1px solid var(--rule);
+      border-radius: 8px;
       padding: 40px;
       max-width: 900px;
       width: 100%;
-      box-shadow: var(--shadow-container);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
+      box-shadow: 0 8px 24px rgba(42, 33, 23, 0.1);
       overflow-y: auto;
       max-height: 80vh;
-      transition: background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
     }
 
     .content {
-      font-size: 17px;
+      font-size: 18px;
       text-align: left;
       max-width: 75ch;
       margin: auto;
       white-space: normal;
       word-break: break-word;
+    }
+
+    .content h2 {
+      font-family: 'Cormorant Garamond', 'Noto Serif Georgian', serif;
+      font-weight: 500;
+      font-size: 2.2rem;
+      letter-spacing: 0.02em;
+      margin: 0 0 1.5rem;
+      text-align: center;
+      color: var(--ink);
     }
 
     .content p {
@@ -114,13 +102,10 @@
     }
 
     @media (max-width: 600px) {
-      .container {
-        padding: 20px;
-      }
-
-      .back-button {
-        font-size: 16px;
-      }
+      .container { padding: 20px; }
+      .back-button { font-size: 17px; }
+      .content { font-size: 17px; }
+      .content h2 { font-size: 1.8rem; }
     }
 
     .visit-counter {
@@ -130,62 +115,25 @@
       display: flex;
       align-items: center;
       gap: 6px;
-      padding: 6px 10px;
-      font-family: 'Times New Roman', Times, serif;
-      font-size: 12px;
-      color: var(--pill-text);
-      background: var(--pill-bg);
-      border: 1px solid var(--pill-border);
+      padding: 6px 12px;
+      font-family: 'EB Garamond', 'Noto Serif Georgian', Georgia, serif;
+      font-size: 13px;
+      color: var(--ink-soft);
+      background: var(--paper-2);
+      border: 1px solid var(--rule);
       border-radius: 999px;
-      backdrop-filter: blur(8px);
-      -webkit-backdrop-filter: blur(8px);
       z-index: 1000;
       user-select: none;
       pointer-events: none;
-      transition: background 0.3s ease, border-color 0.3s ease, color 0.3s ease;
     }
 
     .visit-counter .material-icons {
       font-size: 14px;
       color: var(--accent);
     }
-
-    .theme-toggle {
-      position: fixed;
-      top: 14px;
-      right: 14px;
-      width: 40px;
-      height: 40px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 0;
-      background: var(--pill-bg);
-      border: 1px solid var(--pill-border);
-      border-radius: 999px;
-      color: var(--accent);
-      cursor: pointer;
-      backdrop-filter: blur(8px);
-      -webkit-backdrop-filter: blur(8px);
-      z-index: 1000;
-      transition: background 0.3s ease, border-color 0.3s ease, color 0.3s ease, transform 0.15s ease;
-    }
-
-    .theme-toggle:hover {
-      transform: scale(1.08);
-    }
-
-    .theme-toggle .material-icons {
-      font-size: 20px;
-      color: var(--accent);
-    }
   </style>
 </head>
 <body>
-    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
-      <span class="material-icons" id="theme-icon">light_mode</span>
-    </button>
-
     <a href="index.html" class="back-button">
         <span class="material-icons">arrow_back</span>
         <span>Back</span>
@@ -392,7 +340,6 @@
     <span class="material-icons">visibility</span>
     <span id="visit-count">…</span>
   </div>
-  <script src="theme.js"></script>
   <script src="counter.js"></script>
 </body>
 </html>
