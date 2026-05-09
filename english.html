@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>To Everyone!</title>
+
+  <!-- Font: Fira Code + Material Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Fira Code', monospace;
+      background: linear-gradient(145deg, #0f2027, #203a43, #2c5364);
+      color: #ffffff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px;
+    }
+
+    .back-button {
+  align-self: flex-start;
+  margin-bottom: 20px;
+  color: #00e0ff;
+  text-decoration: none;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.back-button span {
+  text-decoration: none;
+}
+
+/* Only underline the text span on hover */
+.back-button:hover span:last-child {
+  text-decoration: underline;
+}
+
+    .container {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 20px;
+      padding: 40px;
+      max-width: 900px;
+      width: 100%;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      overflow-y: auto;
+      max-height: 80vh;
+    }
+
+    .content {
+  font-size: 17px;
+  line-height: 2.8;
+  text-align: left;
+  max-width: 75ch;
+  margin: auto;
+  white-space: normal;
+  word-break: break-word;
+}
+
+.content p {
+  margin-bottom: 1.5em;
+}
+
+
+    .material-icons {
+      vertical-align: middle;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 20px;
+      }
+
+      .back-button {
+        font-size: 16px;
+      }
+    }
+
+    .visit-counter {
+      position: fixed;
+      bottom: 14px;
+      left: 14px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 10px;
+      font-family: 'Fira Code', monospace;
+      font-size: 12px;
+      color: rgba(255, 255, 255, 0.7);
+      background: rgba(0, 0, 0, 0.25);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 999px;
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      z-index: 1000;
+      user-select: none;
+      pointer-events: none;
+    }
+
+    .visit-counter .material-icons {
+      font-size: 14px;
+      color: #00e0ff;
+    }
+  </style>
+</head>
+<body>
+    <a href="index.html" class="back-button">
+        <span class="material-icons">arrow_back</span>
+        <span>Back</span>
+      </a>
+
+  <div class="container">
+    <div class="content">
+      <!-- 📝 Paste your grandpa's English text here -->
+      <h2>To Everyone!</h2>
+      <p>
+        -Today - (May 17, 2015 -year) is the greatest -day in history.
+        -Today, I made the greatest discovery in the history of Earth’s civilization!
+        Perhaps this is too bold a statement, but only if there were unknown civilizations in Earth’s
+        history that might have existed and vanished without a trace due to a catastrophe similar to the
+        one we know of, which occurred 65 million years ago and caused the extinction of the dinosaurs.
+        And if, during my lifetime, it becomes known that a being in such a civilization made a
+        discovery like mine, I will offer my apologies to that being. Also, it’s possible that,
+        independently of me, someone else could have made the same discovery at the same time but,
+        due to modesty or some other objective reason, they delayed and I beat them to the official
+        publication. In that case, I will also apologize and agree to share the glory and material rewards
+        proportional to each of our contributions to the discovery. If determining the shares proves
+        difficult, I’m willing to split all dividends equally.
+        Now, I’d like to express my gratitude to everyone who contributed—or at least didn’t hinder—
+        my scientific endeavors that led to this greatest discovery. First and foremost, my wife Nelya, my
+        dog Rocky, and all the people close and distant to me. I especially want to highlight the
+        significance of my grandson Emil’s actions, whose behavior led me to realize that humanity,
+        throughout its entire conscious history, has been deeply mistaken about the fundamental
+        phenomena and laws of nature. I’ll elaborate on this later.
+        Casting aside false modesty and understanding the importance of my discovery, I declare: the
+        Nobel Prize, which they will naturally want to award me, is too small to measure my
+        contribution to science. Therefore, I preemptively refuse the title of Nobel laureate, though I
+        won’t refuse its monetary component—although I believe I deserve all the funds currently
+        available to the Nobel Committee and all the funds it might ever have in the future. To those who
+        might envy my fame, I hasten to say that all the money I receive from the recognition of my
+        contribution to science will be donated to help those affected by the implementation of my
+        discovery—and such people will inevitably appear.
+        I fully understand that my discovery will shake the scientific world of the planet and propel it
+        toward new breakthroughs. As a result, my discovery will touch every inhabitant of Earth. All
+        existing knowledge gained by humanity through local evolution must be revised and corrected.
+        We will have to acknowledge the erroneous nature of the theories and ideas of such famous
+        scientists as Einstein, Darwin, Newton, and all others. Even a seemingly hopeless field like time
+        travel will receive a colossal boost in development, and time travel will become routine for
+        anyone who wishes it.
+        But first, we must admit that all knowledge and all sciences are wrong, and all textbooks need to
+        be rewritten. To minimize costs at this initial stage of the scientific revolution, I suggest not
+        burning the incorrect textbooks and scientific works but simply having everyone take a marker or
+        ballpoint pen and correct the mistakes in them. It will be much harder to fix the vast amount of
+        software for personal computers, industrial robots, and various control systems—even devices
+        based on the simplest microcontrollers. In some cases, this correction may prove impossible if
+        the source code is lost or forgotten by its authors, and sparse comments fail to reconstruct their
+        thought processes. Such software will be irretrievably lost to humanity. A sad fate awaits all
+        manufacturers of transportation—cars, all types of aircraft, all types of watercraft, bicycles,
+        scooters, skateboards, and even skis. All these devices will need to be recalled for correction,
+        which will inevitably bankrupt their producers. All existing brands and giant corporations will
+        cease to exist—Microsoft, IBM, Sony, and all the others. Even seemingly harmless companies,
+        like manufacturers of expensive Swiss watches, will vanish from the face of the Earth.
+        For a while, Earth’s civilization will face complete collapse. During this transitional period, all
+        vehicles will stop functioning correctly, and all military equipment will also cease to operate,
+        rendering all wars and conflicts impossible and frozen. For some time, humanity will be
+        completely disoriented, with movement in any direction becoming particularly difficult—even
+        scratching behind your ear without a mirror will be impossible.
+        Television and radio will stop working—and thus stop lying—cellular communication will fail,
+        and SMS will only be sendable to oneself. First and foremost, for a very objective reason,
+        navigation systems like GLONASS and GPS will fail, as all navigation and communication
+        satellites will refuse to function in this new reality. All previous standards and measures will
+        cease to work, necessitating the development of new standards, especially for time and space
+        (length). As for all the clocks we currently use—wristwatches with hands, street clocks, city
+        clocks, home alarm clocks, and others—they must be immediately reworked. The simplest
+        solution I propose is to remove the hands and dial, install the dial on the back of the clock, and
+        attach the hands to the back on an extended axis. As a result, the hands will move in reverse—
+        counterclockwise—and finally show the correct time. Redesigning all digital clocks is much
+        simpler and within the capability of any child over one year old, but I won’t digress into that now
+        —I’ll explain later.
+        Despite the grim prospects of this transitional period, humanity is mature enough to inevitably
+        overcome the crisis. Some measures to mitigate the crisis must be implemented immediately—
+        only then can we avoid the need to reverse the rotation of all celestial bodies: satellites, planets
+        of the solar system, the Sun, all stars and galaxies, all universes, as well as smaller cosmic
+        objects like comets and meteorites. Only these measures can prevent the total destruction of both
+        the visible and invisible parts of the cosmos and delay the onset of a new BIG BANG, which,
+        over thirteen billion years ago, created Space and Time and our universe. If these urgent
+        measures are carried out successfully, the complete collapse of the world order can be avoided,
+        industry can be restored, and wars and conflicts can be unfrozen. But the world will never be the
+        same again. Whether we want it or not, it will be a new world where even cannons, rockets, and
+        ordinary bullets will fly backward and strike the devices and people who fired them. Whether we
+        want it or not, we will all have to relearn everything—just as, after birth, the world appeared
+        upside-down to each of us due to the peculiarities of vision, we will now have to flip it back, and
+        gradually everything will fall into place. But some unpopular measures will be unavoidable.
+        We will have to call things by their true names. We will have to acknowledge that an electron is
+        not a negatively charged particle, and a positron is not positively charged, and correctly assign
+        their true polarities. We will have to teach children correctly that electric current is the movement
+        of positively charged particles through a conductor from the positive electrode of a power source
+        to the negative one. We will need to take colored markers and correct the polarity on all existing
+        power sources, and use black and red paint to change the polarity markings on car batteries. For
+        now, I warn car owners against swapping their battery terminals themselves, as this will lead to
+        predictable results. It’s better left to manufacturers later on. It will also be necessary to reposition
+        the magnetic poles of all permanent magnets and Earth’s poles, recognizing that we live in the
+        Southern Hemisphere of the globe. We will also need to correctly establish the phase sequence of
+        three-phase 50 Hz and 60 Hz electrical grids or abandon them entirely, considering that our
+        understanding of the sinusoidal waveform was fundamentally wrong. Naively trusting
+        oscilloscope screens with horizontal time sweeps, we thought sinusoidal current flowed through
+        wires and the ether from left to right—now we know it’s the opposite, from right to left. All types
+        of electric motors, it turns out, rotate backward and incorrectly, and all vehicles move us in the
+        opposite direction of where we need to go.
+        Correcting mistakes and dispelling humanity’s millennia-long misconceptions about the nature of
+        Space and Time is an inevitable process. I don’t blame the scientists who drew incorrect
+        conclusions and created flawed theories and laws as a result. Neither Einstein, nor Darwin, nor
+        Newton, nor anyone else is at fault—they were simply too trusting. My only grievance is with
+        the so-called great mathematicians; they could have calculated the error before anyone else but
+        either didn’t want to or were too afraid to take responsibility for the consequences. I, however,
+        am not afraid and am willing to answer to the judgment of history. I believe the sooner we
+        correct this mistake, the sooner an era of universal prosperity and progress will dawn on Earth,
+        and the long-awaited communism will finally arrive, where everyone can do nothing if they
+        choose and still receive everything life has to offer without limits. As a result, migration and
+        wars will disappear, and all surviving refugees and displaced persons will return to their homes.
+        The sooner humanity breaks free from the confines of the solar system and reaches alien
+        civilizations—which, as it turns out, have not yet made a discovery like mine. If they had, Earth
+        would already have been conquered by them or, at best, part of an interplanetary galactic
+        alliance. It’s now clear what nonsense those so-called astronomers have been feeding us. It’s
+        clear that black holes are not holes at all but rather solid objects of small size with enormous
+        mass. They claim our universe, after the Big Bang, is made of matter and is continuously
+        expanding, with all interstellar space filled with dark energy. Now it’s evident that it’s the
+        opposite—our entire universe is made of antimatter and continuously contracts for each of us,
+        shrinking to zero by the end of our lives.
+        I’ll briefly recount the incredible confluence of circumstances that created the necessary
+        conditions and pushed me toward this genius discovery. Truthfully, I have no answer to why it
+        was me and not someone else—why providence chose me, and why now. Of course, I’m a
+        special person, but even for me, such a discovery is overwhelming. The more I think about it, the
+        more I’m convinced that such a discovery was destined for me and me alone. An event like this,
+        a discovery of this magnitude, happens no more than once in the lifetime of any universe.
+        Despite there being an infinite number of universes like ours, made of antimatter and matter,
+        constantly colliding, contracting, and exploding, a discovery like mine, on the scale of a
+        universe’s life—and even more so Earth’s civilization—is extraordinarily rare, and I’m proud to
+        have achieved it. Reflecting on my journey, I conclude that several events made this discovery
+        possible. The first happened (my apologies to historians who will undoubtedly be interested in
+        my biography for the approximate dates) when my eldest son was about five or six years old.
+        Lacking other tools, he took a hammer and tried to do to his grandmother’s clock what I’ve
+        already advised you to do with analog clocks. He didn’t succeed back then because, at his age, he
+        could only handle redesigning digital clocks—but those were rare at the time, and no one let him
+        near them. The second significant event involved digital clocks and featured my grandson, the
+        son of my younger son (whom I mentioned earlier). He categorically refused to write a program
+        for digital clocks on a PIC microcontroller. His protest against our flawed understanding of
+        time’s essence sent a powerful impulse into my subconscious. My granddaughter Ira played a
+        different role—she didn’t protest when I suggested we make a birthday gift for her mom in the
+        form of digital clocks. We successfully made the gift, and that event imprinted an impulse of
+        opposite polarity in my subconscious, which only delayed the historic moment of my discovery.
+        Fortunately, another event brought that date closer: I was hired into one of the departments of our
+        city’s administration, specifically the communal services division. While my colleagues drove
+        massive garbage trucks to clean out trash bins and an army of janitors swept the streets daily, I
+        was entrusted with the no less critical task of overseeing the city’s clocks—five in total—and
+        ensuring their uninterrupted and accurate operation. These old clocks, which, when turned off,
+        showed the exact time twice a day across all twenty-four Earth time zones, influenced my
+        subconscious with yet another powerful impulse through their unsynchronized operation and
+        refusal to show accurate time when switched on, demonstrating that our notions of time were
+        wrong.
+        And so, today—May 17, 2015—this historic day, after lunch, as I lay on my couch in a half-
+        dozing state, all the impulse energy accumulated in my subconscious burst forth with tremendous
+        force, and it hit me—I unraveled the mystery of humanity’s misconceptions. Everything instantly
+        fell into place; a complete fusion of Space, Time, and my subconscious occurred. And it pained
+        me that only now, and only I, with a delay of four billion years in Earth’s history and over
+        thirteen billion years since our universe’s birth, could grasp the meaning of Time and its
+        influence on Space. If this discovery had been made earlier, if someone else had made it long
+        before I was born, I’d be far happier—living in a brilliant world, not in a poor, ravaged, partially
+        occupied country, a world with no place for scoundrels and “fathers of nations” like Hitler,
+        Stalin, Putin, and other filth.
+        Now, to the most important part—the essence of my discovery: what I realized lying on the
+        couch. It’s no coincidence that I’ve described my posture and this now-historic piece of furniture
+        in such detail. I understand that many sculptors and artists will want to immortalize this piece of
+        furniture and me in history, cast it in granite—so this information is for them. So, what is the
+        essence of my discovery? Behind the apparent simplicity of the answer lies the thirteen-billion-
+        year history of our universe, a long journey that, through the labor of many generations,
+        countless misconceptions, and mistakes, led to an understanding of Space and Time. The core
+        postulate of my discovery, capable of turning the world upside down and inside out, is this
+        assertion: time cannot be a positive quantity. Time has a minus sign. Time is exclusively a
+        negative quantity. It always decreases; it never adds to anyone or anything. Every -moment,
+        every -second, -minute, -hour, -day, -week, -month, -year—is time taken away, lost, a spent life.
+        Now it’s clear why the title of my message “To Everyone” and all temporal parameters bear a
+        minus sign. Now it’s understandable why even an infant can fix digital clocks—all they need is a
+        marker of the right color to place a bold -minus sign before the highest digit.
+        Now it’s evident why Space, like Time, is a negative quantity. According to the well-known and
+        undeniably correct formula, the distance traveled by any object in uniform motion equals
+        velocity multiplied by time. Since time is a negative quantity, the distance traveled by an object
+        is also negative. Though I’m no expert in mechanics—or any science—I assert with 100%
+        certainty that the result of distance traveled in non-uniform motion will also be negative. What
+        does this mean? It means that, due to erroneous notions of Space and Time, humanity hasn’t just
+        been stagnant in its development—it’s been racing backward at breakneck speed, in real, virtual,
+        and moral terms. This explains much of Earth’s history: conquest wars, cruelty, lies, betrayal,
+        theft, the degradation of family values, same-sex marriages, the loss of concepts like nobility. As
+        a dilettante in all sciences, I don’t claim to provide a precise analysis of the crisis caused by my
+        discovery, and, of course, escaping it won’t be simple. Simply placing minus signs in physics
+        textbooks with a ballpoint pen won’t save Earth’s civilization. Only coordinated efforts across all
+        of Earth’s Space and Time will help us emerge from this crisis.
+        P.S. I believe that, within two years, Earth’s economy will recover from the recession because, by
+        then, through our collective efforts, we’ll have corrected all the mistakes humanity has made
+        over millennia and mitigated their consequences.
+        P.P.S. Obviously, media controlled by the rulers of certain countries will try to hinder the spread
+        of my message “To Everyone,” so I’m taking steps to translate it into the languages of the
+        peoples of North Korea, Nauru, Vanuatu, Venezuela, and Zimbabwe. The powerful support of
+        these countries will help accelerate the rescue of Earth’s civilization.
+      </p>
+    </div>
+  </div>
+
+  <div class="visit-counter" aria-label="visits">
+    <span class="material-icons">visibility</span>
+    <span id="visit-count">…</span>
+  </div>
+  <script src="counter.js"></script>
+</body>
+</html>
